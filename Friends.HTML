@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KoKoa | Friends</title>
+  <link rel="stylesheet" href="styles/common.css" />
+  <link rel="stylesheet" href="styles/friends.css" />
+</head>
+<body>
+<div class="screen">
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-bar__left">
+      No Service
+      <svg viewBox="0 0 24 24"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+    </div>
+    <span class="status-bar__time">21:23</span>
+    <div class="status-bar__right">
+      <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+      100%
+      <svg viewBox="0 0 24 24"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+    </div>
+  </div>
+
+  <!-- Header: "Friends" + search / music / settings -->
+  <div class="page-header">
+    <span class="page-header__title">Friends</span>
+    <div class="page-header__actions">
+      <!-- Search -->
+      <div class="icon-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/>
+        </svg>
+      </div>
+      <!-- Music note -->
+      <div class="icon-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+        </svg>
+      </div>
+      <!-- Settings gear -->
+      <div class="icon-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Friends' Names Display banner -->
+  <div class="friends-banner">
+    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+    Friends' Names Display
+    <span class="friends-banner__arrow">›</span>
+  </div>
+
+  <!-- Content -->
+  <div class="page-content">
+
+    <!-- My Profile -->
+    <div class="my-profile">
+      <div class="avatar avatar--lg" style="background:#7B9BC8;color:white;font-size:22px;">R</div>
+      <div class="my-profile__info">
+        <div class="my-profile__name">Ryan Ku</div>
+        <div class="my-profile__status">오늘도 열심히 코딩 중 💻</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Channel section -->
+    <div class="section-header">
+      <span class="section-header__label">Channel</span>
+      <div class="section-header__toggle">
+        <svg viewBox="0 0 24 24"><path d="M7 14l5-5 5 5z"/></svg>
+      </div>
+    </div>
+
+    <div class="channel-item">
+      <div class="channel-icon">Ch</div>
+      <span class="channel-item__name">Channel</span>
+      <div class="channel-item__count">
+        2
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Friends section -->
+    <div class="section-header">
+      <span class="section-header__label">Friends · 8</span>
+    </div>
+
+    <div class="friend-item">
+      <div class="avatar avatar--md" style="background:#A8C8E8;color:#2A4A6A;">지</div>
+      <div class="friend-item__info">
+        <div class="friend-item__name">김지수</div>
+        <div class="friend-item__status">오늘 스터디 4시에 있어요!</div>
+      </div>
+    </div>
+
+    <div class="friend-item">
+      <div class="avatar avatar--md" style="background:#A8D8A8;color:#2A5A2A;">준</div>
+      <div class="friend-item__info">
+        <div class="friend-item__name">이준혁</div>
+        <div class="friend-item__status">주말 뭐해?</div>
+      </div>
+    </div>
+
+    <div class="friend-item">
+      <div class="avatar avatar--md" style="background:#D8C8F8;color:#4A2A7A;">민</div>
+      <div class="friend-item__info">
+        <div class="friend-item__name">최민준</div>
+        <div class="friend-item__status">BJJ 훈련 마치고 옴 🥋</div>
+      </div>
+    </div>
+
+    <div class="friend-item">
+      <div class="avatar avatar--md" style="background:#F8D8A8;color:#6A3A0A;">서</div>
+      <div class="friend-item__info">
+        <div class="friend-item__name">박서연</div>
+        <div class="friend-item__status">커피 한 잔의 여유 ☕</div>
+      </div>
+    </div>
+
+    <div class="friend-item">
+      <div class="avatar avatar--md" style="background:#F8C8D8;color:#6A1A3A;">유</div>
+      <div class="friend-item__info">
+        <div class="friend-item__name">정유나</div>
+        <div class="friend-item__status">🎵 나의 하루는 음악과 함께</div>
+      </div>
+    </div>
+
+    <div class="friend-item">
+      <div class="avatar avatar--md" style="background:#C8F0E8;color:#1A5A4A;">다</div>
+      <div class="friend-item__info">
+        <div class="friend-item__name">한다은</div>
+        <div class="friend-item__status">Design is thinking made visual</div>
+      </div>
+    </div>
+
+    <div class="friend-item">
+      <div class="avatar avatar--md" style="background:#F8E8C8;color:#6A4A0A;">성</div>
+      <div class="friend-item__info">
+        <div class="friend-item__name">윤성재</div>
+        <div class="friend-item__status">오늘도 열심히 🔥</div>
+      </div>
+    </div>
+
+    <div class="friend-item">
+      <div class="avatar avatar--md" style="background:#C8D8F8;color:#1A2A6A;">현</div>
+      <div class="friend-item__info">
+        <div class="friend-item__name">서현우</div>
+        <div class="friend-item__status">Sussex 대학원 준비 중</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Nav Bar -->
+  <nav class="nav">
+    <a href="friends.html" class="nav__item active">
+      <!-- person outline -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+    </a>
+    <a href="chats.html" class="nav__item">
+      <!-- chat bubble outline -->
+      <div class="nav__badge-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+        <span class="nav__badge">1</span>
+      </div>
+    </a>
+    <a href="find.html" class="nav__item">
+      <!-- search -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/>
+      </svg>
+    </a>
+    <a href="more.html" class="nav__item">
+      <!-- three dots with red dot -->
+      <div style="position:relative;display:inline-flex;">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
+          <circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/>
+        </svg>
+        <span class="nav__dot"></span>
+      </div>
+    </a>
+  </nav>
+
+</div>
+</body>
+</html>
