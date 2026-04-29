@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KoKoa | Settings</title>
+  <link rel="stylesheet" href="styles/common.css" />
+  <link rel="stylesheet" href="styles/settings.css" />
+</head>
+<body>
+<div class="screen">
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-bar__left">
+      No Service
+      <svg viewBox="0 0 24 24"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+    </div>
+    <span class="status-bar__time">21:23</span>
+    <div class="status-bar__right">
+      <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+      100%
+      <svg viewBox="0 0 24 24"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+    </div>
+  </div>
+
+  <!-- Settings Header: < (left)  Settings (center)  search (right) -->
+  <div class="settings-header">
+    <a href="more.html" class="settings-header__back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+    </a>
+    <span class="settings-header__title">Settings</span>
+    <div class="settings-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="page-content">
+
+    <!-- Group 1: Notices, Kakao Lab, Version -->
+    <div class="settings-item">
+      <div class="settings-item__icon">
+        <!-- megaphone -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+        </svg>
+      </div>
+      <span class="settings-item__label">Notices</span>
+    </div>
+
+    <div class="settings-item">
+      <div class="settings-item__icon">
+        <!-- beaker/lab -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M9 3h6v11l3.3 5.5A2 2 0 0 1 16.6 22H7.4a2 2 0 0 1-1.7-2.5L9 14V3z"/>
+          <line x1="9" y1="3" x2="15" y2="3"/>
+        </svg>
+      </div>
+      <span class="settings-item__label">Kakao Lab</span>
+    </div>
+
+    <div class="settings-item">
+      <div class="settings-item__icon">
+        <!-- info circle -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="8" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="12" y1="12" x2="12" y2="16"/>
+        </svg>
+      </div>
+      <span class="settings-item__label">Version</span>
+      <span class="settings-item__right">Latest Version</span>
+    </div>
+
+    <!-- Gap between groups (reference shows larger spacing) -->
+    <div class="settings-group-gap"></div>
+
+    <!-- Group 2: Privacy, Notifications, Friends, Chats, Display(N), Themes(N), Call -->
+    <div class="settings-item">
+      <div class="settings-item__icon">
+        <!-- lock -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="5" y="11" width="14" height="11" rx="2"/>
+          <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+          <line x1="12" y1="16" x2="12" y2="16" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="settings-item__label">Privacy</span>
+    </div>
+
+    <div class="settings-item">
+      <div class="settings-item__icon">
+        <!-- bell -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+        </svg>
+      </div>
+      <span class="settings-item__label">Notifications</span>
+    </div>
+
+    <div class="settings-item">
+      <div class="settings-item__icon">
+        <!-- person -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+        </svg>
+      </div>
+      <span class="settings-item__label">Friends</span>
+    </div>
+
+    <div class="settings-item">
+      <div class="settings-item__icon">
+        <!-- chat bubble -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+      </div>
+      <span class="settings-item__label">Chats</span>
+    </div>
+
+    <div class="settings-item">
+      <div class="settings-item__icon">
+        <!-- sun/display -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      </div>
+      <span class="settings-item__label">Display</span>
+      <span class="settings-item__right">
+        <span class="badge-n">N</span>
+      </span>
+    </div>
+
+    <div class="settings-item">
+      <div class="settings-item__icon">
+        <!-- themes / grid -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+          <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+        </svg>
+      </div>
+      <span class="settings-item__label">Themes</span>
+      <span class="settings-item__right">
+        <span class="badge-n">N</span>
+        Default theme
+      </span>
+    </div>
+
+    <div class="settings-item">
+      <div class="settings-item__icon">
+        <!-- phone -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/>
+        </svg>
+      </div>
+      <span class="settings-item__label">Call</span>
+    </div>
+
+    <div class="settings-item">
+      <div class="settings-item__icon">
+        <!-- shield -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+      <span class="settings-item__label">Chat Security</span>
+    </div>
+
+    <div class="settings-item">
+      <div class="settings-item__icon">
+        <!-- person + gear -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4"/>
+          <circle cx="19" cy="19" r="3"/>
+          <line x1="19" y1="16" x2="19" y2="17"/><line x1="19" y1="21" x2="19" y2="22"/>
+          <line x1="16" y1="19" x2="17" y2="19"/><line x1="21" y1="19" x2="22" y2="19"/>
+        </svg>
+      </div>
+      <span class="settings-item__label">Account</span>
+    </div>
+
+  </div>
+
+  <!-- Nav Bar -->
+  <nav class="nav">
+    <a href="friends.html" class="nav__item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+      </svg>
+    </a>
+    <a href="chats.html" class="nav__item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+    </a>
+    <a href="find.html" class="nav__item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/>
+      </svg>
+    </a>
+    <a href="more.html" class="nav__item active">
+      <div style="position:relative;display:inline-flex;">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
+          <circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/>
+        </svg>
+        <span class="nav__dot"></span>
+      </div>
+    </a>
+  </nav>
+
+</div>
+</body>
+</html>
