@@ -1,0 +1,120 @@
+/* ── more.css ── */
+
+/* Profile row */
+.more-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px 18px;
+}
+.more-profile__info { flex: 1; }
+.more-profile__name { font-size: 17px; font-weight: 700; color: var(--black); }
+.more-profile__phone {
+  font-size: 13px;
+  color: var(--gray);
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.more-profile__phone svg { width: 15px; height: 15px; fill: var(--red); }
+
+.more-profile__chat {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.more-profile__chat svg { width: 26px; height: 26px; stroke: var(--black); fill: none; stroke-width: 1.5; }
+
+/* Icon grid */
+.more-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px 0 8px;
+  border-top: 1px solid var(--border);
+}
+
+.more-grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 4px;
+  cursor: pointer;
+}
+.more-grid-item:hover .more-grid-item__icon svg { opacity: 0.6; }
+
+.more-grid-item__icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.more-grid-item__icon svg {
+  width: 34px;
+  height: 34px;
+  stroke: var(--black);
+  fill: none;
+  stroke-width: 1.3;
+}
+.more-grid-item__dot {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 7px;
+  height: 7px;
+  background: var(--red);
+  border-radius: 50%;
+}
+
+.more-grid-item__label { font-size: 12px; color: var(--black); text-align: center; }
+
+/* Second row (3 items) */
+.more-grid--3 { grid-template-columns: repeat(3, 1fr); }
+/* actually in reference it shows 4+2=6 items, with second row having just 2: Account + Openchat */
+/* Let me keep as needed */
+
+/* Divider with spacing */
+.more-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 8px 0;
+}
+
+/* Suggestions section */
+.suggestions-section {
+  padding: 0 18px;
+}
+.suggestions-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 16px;
+}
+.suggestions-list {
+  display: flex;
+  gap: 20px;
+}
+.suggestion-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.suggestion-item__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+.suggestion-item__label { font-size: 12px; color: var(--black); text-align: center; }
