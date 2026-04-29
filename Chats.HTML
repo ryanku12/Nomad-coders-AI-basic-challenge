@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KoKoa | Chats</title>
+  <link rel="stylesheet" href="styles/common.css" />
+  <link rel="stylesheet" href="styles/chats.css" />
+</head>
+<body>
+<div class="screen">
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-bar__left">
+      No Service
+      <svg viewBox="0 0 24 24"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+    </div>
+    <span class="status-bar__time">21:23</span>
+    <div class="status-bar__right">
+      <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+      100%
+      <svg viewBox="0 0 24 24"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <div class="page-header">
+    <span class="page-header__title">Chats</span>
+    <div class="page-header__actions">
+      <div class="icon-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/>
+        </svg>
+      </div>
+      <!-- New chat -->
+      <div class="icon-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          <line x1="12" y1="8" x2="12" y2="14"/><line x1="9" y1="11" x2="15" y2="11"/>
+        </svg>
+      </div>
+      <!-- Music -->
+      <div class="icon-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+        </svg>
+      </div>
+      <!-- Settings -->
+      <div class="icon-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chat List -->
+  <div class="page-content">
+
+    <!-- KakaoTalk system chat (matching reference exactly) -->
+    <a href="chat.html" class="chat-list-item">
+      <div class="talk-icon">
+        <div class="talk-icon__inner">TALK</div>
+      </div>
+      <div class="chat-list-item__info">
+        <div class="chat-list-item__top">
+          <div class="chat-list-item__name">KakaoTalk</div>
+          <div class="chat-list-item__time">21:22</div>
+        </div>
+        <div class="chat-list-item__bottom">
+          <div class="chat-list-item__preview">Please check My Kokoa Account Info</div>
+          <div class="unread-badge">1</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="chat.html" class="chat-list-item">
+      <div class="avatar avatar--md" style="background:#A8C8E8;color:#2A4A6A;">지</div>
+      <div class="chat-list-item__info">
+        <div class="chat-list-item__top">
+          <div class="chat-list-item__name">김지수</div>
+          <div class="chat-list-item__time">오후 6:30</div>
+        </div>
+        <div class="chat-list-item__bottom">
+          <div class="chat-list-item__preview">스터디 자료 확인했어? 내일 발표인데 ㅠㅠ</div>
+          <div class="unread-badge">3</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="chat.html" class="chat-list-item">
+      <div class="avatar avatar--md" style="background:#D8C8F8;color:#4A2A7A;">준</div>
+      <div class="chat-list-item__info">
+        <div class="chat-list-item__top">
+          <div class="chat-list-item__name">Sussex CS 스터디 <span class="chat-list-item__member-count">3</span></div>
+          <div class="chat-list-item__time">오후 5:12</div>
+        </div>
+        <div class="chat-list-item__bottom">
+          <div class="chat-list-item__preview">이준혁: 알고리즘 풀고 나서 밥 먹을 사람?</div>
+          <div class="unread-badge">12</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="chat.html" class="chat-list-item">
+      <div class="avatar avatar--md" style="background:#C8F0E8;color:#1A5A4A;">민</div>
+      <div class="chat-list-item__info">
+        <div class="chat-list-item__top">
+          <div class="chat-list-item__name">최민준</div>
+          <div class="chat-list-item__time">오후 3:47</div>
+        </div>
+        <div class="chat-list-item__bottom">
+          <div class="chat-list-item__preview">내일 BJJ 훈련 몇 시야?</div>
+          <span></span>
+        </div>
+      </div>
+    </a>
+
+    <a href="chat.html" class="chat-list-item">
+      <div class="avatar avatar--md" style="background:#F8D8A8;color:#6A3A0A;">엄</div>
+      <div class="chat-list-item__info">
+        <div class="chat-list-item__top">
+          <div class="chat-list-item__name">엄마 💛</div>
+          <div class="chat-list-item__time">오전 10:22</div>
+        </div>
+        <div class="chat-list-item__bottom">
+          <div class="chat-list-item__preview">밥은 먹었니? 힘들면 연락해</div>
+          <div class="unread-badge">1</div>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Nav Bar -->
+  <nav class="nav">
+    <a href="friends.html" class="nav__item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+      </svg>
+    </a>
+    <a href="chats.html" class="nav__item active">
+      <div class="nav__badge-wrap">
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+          <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+        </svg>
+        <span class="nav__badge">1</span>
+      </div>
+    </a>
+    <a href="find.html" class="nav__item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/>
+      </svg>
+    </a>
+    <a href="more.html" class="nav__item">
+      <div style="position:relative;display:inline-flex;">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
+          <circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/>
+        </svg>
+        <span class="nav__dot"></span>
+      </div>
+    </a>
+  </nav>
+
+</div>
+</body>
+</html>
