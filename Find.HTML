@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KoKoa | Find</title>
+  <link rel="stylesheet" href="styles/common.css" />
+  <link rel="stylesheet" href="styles/find.css" />
+</head>
+<body>
+<div class="screen">
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-bar__left">
+      No Service
+      <svg viewBox="0 0 24 24"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+    </div>
+    <span class="status-bar__time">21:23</span>
+    <div class="status-bar__right">
+      <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+      100%
+      <svg viewBox="0 0 24 24"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+    </div>
+  </div>
+
+  <!-- Header: "Find" + search + settings -->
+  <div class="page-header">
+    <span class="page-header__title">Find</span>
+    <div class="page-header__actions">
+      <div class="icon-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/>
+        </svg>
+      </div>
+      <div class="icon-btn" style="position:relative;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+        <!-- red dot on settings icon -->
+        <span style="position:absolute;top:0;right:0;width:6px;height:6px;background:var(--red);border-radius:50%;"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-content">
+
+    <!-- 4-icon action grid -->
+    <div class="find-actions">
+      <!-- QR Code -->
+      <div class="find-action">
+        <div class="find-action__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+            <line x1="14" y1="14" x2="14" y2="14"/><line x1="17" y1="14" x2="17" y2="14"/>
+            <line x1="20" y1="14" x2="20" y2="14"/><line x1="14" y1="17" x2="14" y2="17"/>
+            <line x1="20" y1="17" x2="20" y2="17"/><line x1="14" y1="20" x2="17" y2="20"/>
+            <line x1="20" y1="20" x2="20" y2="17"/>
+          </svg>
+        </div>
+        <span class="find-action__label">QR Code</span>
+      </div>
+      <!-- Add by Contacts -->
+      <div class="find-action">
+        <div class="find-action__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="3" width="20" height="18" rx="2"/>
+            <circle cx="12" cy="10" r="3"/>
+            <path d="M6 20c0-3.31 2.69-6 6-6s6 2.69 6 6"/>
+          </svg>
+        </div>
+        <span class="find-action__label">Add by<br>Contacts</span>
+      </div>
+      <!-- Add by ID -->
+      <div class="find-action">
+        <div class="find-action__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="9" y1="12" x2="15" y2="12"/>
+            <line x1="12" y1="9" x2="12" y2="15"/>
+            <!-- ID text -->
+          </svg>
+        </div>
+        <span class="find-action__label">Add by ID</span>
+      </div>
+      <!-- Invite -->
+      <div class="find-action">
+        <div class="find-action__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <span class="find-action__label">Invite</span>
+      </div>
+    </div>
+
+    <!-- Recommended Friends -->
+    <div class="section-label">Recommended Friends</div>
+    <div class="find-empty">You have no recommended friends.</div>
+
+    <div class="divider"></div>
+
+    <!-- Open Chat header -->
+    <div class="openchat-header">
+      <span class="openchat-header__title">Open Chat</span>
+      <span class="openchat-header__link">
+        Go to Openchat Home
+        <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </span>
+    </div>
+
+    <!-- Open chat items -->
+    <div class="openchat-item">
+      <div class="openchat-item__info">
+        <div class="openchat-item__name">#BTS</div>
+        <div class="openchat-item__tags">#BTS#ARMY#FRIENDS</div>
+        <div class="openchat-item__meta">
+          <div class="avatar avatar--sm" style="background:#8877AA;color:white;font-size:11px;">B</div>
+          802 members |
+          <span class="openchat-item__active">Active</span>
+        </div>
+      </div>
+      <div class="openchat-item__thumb">
+        <div class="openchat-item__thumb-emoji" style="background:linear-gradient(135deg,#6B4EFF,#C78FFF);">🎵</div>
+        <div class="openchat-item__hearts">♥ 326</div>
+      </div>
+    </div>
+
+    <div class="openchat-item">
+      <div class="openchat-item__info">
+        <div class="openchat-item__name">Bts Gang~</div>
+        <div class="openchat-item__tags">#englishonly #ipurpleyou #jimin #taeta...</div>
+        <div class="openchat-item__meta">
+          <div class="avatar avatar--sm" style="background:#EE9944;color:white;font-size:11px;">B</div>
+          299 members |
+          <span class="openchat-item__active">Active</span>
+        </div>
+      </div>
+      <div class="openchat-item__thumb">
+        <div class="openchat-item__thumb-emoji" style="background:linear-gradient(135deg,#662244,#AA3366);">🌸</div>
+        <div class="openchat-item__hearts">♥ 215</div>
+      </div>
+    </div>
+
+    <div class="openchat-item">
+      <div class="openchat-item__info">
+        <div class="openchat-item__name">AI 개발자 모임</div>
+        <div class="openchat-item__tags">#AI #개발 #Python #ML</div>
+        <div class="openchat-item__meta">
+          <div class="avatar avatar--sm" style="background:#3366CC;color:white;font-size:11px;">A</div>
+          5,120 members |
+          <span class="openchat-item__active">Active</span>
+        </div>
+      </div>
+      <div class="openchat-item__thumb">
+        <div class="openchat-item__thumb-emoji" style="background:linear-gradient(135deg,#1144AA,#4488FF);">💻</div>
+        <div class="openchat-item__hearts">♥ 412</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Nav Bar -->
+  <nav class="nav">
+    <a href="friends.html" class="nav__item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+      </svg>
+    </a>
+    <a href="chats.html" class="nav__item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+    </a>
+    <a href="find.html" class="nav__item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/>
+      </svg>
+    </a>
+    <a href="more.html" class="nav__item">
+      <div style="position:relative;display:inline-flex;">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
+          <circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/>
+        </svg>
+        <span class="nav__dot"></span>
+      </div>
+    </a>
+  </nav>
+
+</div>
+</body>
+</html>
